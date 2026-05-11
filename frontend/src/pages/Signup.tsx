@@ -11,11 +11,9 @@ function Signup() {
 	async function signup() {
 		const username = usernameRef.current?.value;
 		const password = passwordRef.current?.value;
-		await axios.post(import.meta.env.BACKEND_URL + "api/v1/signup", {
-			data: {
-				username,
-				password
-			}
+		await axios.post(import.meta.env.VITE_BACKEND_URL + "api/v1/signup", {
+			username,
+			password
 		});
 		alert("You have signup")
 	}
@@ -41,4 +39,4 @@ function Signup() {
 	);
 }
 
-			export default Signup;
+export default Signup;
