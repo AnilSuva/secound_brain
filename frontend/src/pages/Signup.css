@@ -1,0 +1,87 @@
+.signup-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3c82c8, #eef2ff);
+    padding: 24px
+}
+
+.signup-card {
+    width: 420px;
+    max-width: 94%;
+    background: linear-gradient(135deg, #eaf5ff, #bfc5da);;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15, 23, 42, 0.04)
+}
+
+.signup-card h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    color: #0f172a
+}
+
+.muted {
+    color: #6b7280;
+    margin: 0 0 14px;
+    font-size: 13px
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.form label {
+    font-size: 13px;
+    color: #374151
+}
+
+.otp-row {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.otp-row input,
+.otp-row textarea {
+    flex: 1
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #e5e7eb;
+    color: #111827
+}
+
+.notice {
+    color: #10b981;
+    font-size: 13px;
+    margin-top: 6px
+}
+
+@media (max-width:480px) {
+    .signup-card {
+        padding: 20px
+    }
+
+    .btn {
+        padding: 9px 12px
+    }
+}
