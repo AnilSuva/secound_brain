@@ -7,6 +7,7 @@ const basicStyle: React.CSSProperties = {
   width: 'fit-content',
   margin: '5px 0px',
   padding: '5px',
+  borderRadius: '9px'
 }
 
 function Sidebar() {

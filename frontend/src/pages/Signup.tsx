@@ -2,20 +2,23 @@ import { useRef } from 'react'
 import axios from 'axios';
 import Input from '../components/Input'
 import './Signup.css'
+import { useNavigate } from 'react-router-dom';
 
 
 function Signup() {
 	const usernameRef = useRef<HTMLInputElement>(null);
 	const passwordRef = useRef<HTMLInputElement>(null);
+	const navigate = useNavigate();
 
 	async function signup() {
 		const username = usernameRef.current?.value;
 		const password = passwordRef.current?.value;
-		await axios.post(import.meta.env.VITE_BACKEND_URL + "api/v1/signup", {
+		await axios.post(import.meta.env.VITE_BACKEND_URL + "/api/v1/signup", {
 			username,
 			password
 		});
-		alert("You have signup")
+		alert("You have signup");
+		navigate("/dashboard");
 	}
 
 	return (

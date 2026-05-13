@@ -1,32 +1,5 @@
-.parent {
-    display: grid;
-    grid-template-columns: min(30%, 270px) 1fr;
-    grid-template-rows: 100vh;
-    height: 100vh;
-}
 
-.sidebar {
-    grid-column: 1 / 2;
-    grid-row: 1;
-    background: #efeff5;
-    padding: 16px;
-    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.198);
-    overflow: auto;
-}
 
-.play-area{
-    grid-column: 2 / 3;
-    grid-row: 1;
-    padding: 16px;
-    overflow: auto;
-}
-
-.hoverEffect{
-    transition: background-color 0.3s ease-in-out
-}
-.hoverEffect:hover{
-    background-color: rgb(133, 185, 236);
-}
 body {
     margin: 0;
 }

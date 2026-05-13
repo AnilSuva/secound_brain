@@ -30,6 +30,7 @@ function Input({ value, onChange, placeholder, multiline = false, rows = 3, ref 
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        ref={ref}
         rows={rows}
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}

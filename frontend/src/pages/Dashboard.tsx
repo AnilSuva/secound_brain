@@ -5,9 +5,12 @@ import { Card } from '../components/Card';
 import CreateContent from '../components/CreateContent';
 import { useState } from 'react';
 import Sidebar from '../components/Sidebar';
+import '../pages/Dashboard.css'
+import { useContent } from '../hooks/useContent';
 
 function Dashboard() {
   const [createOpen, setCreateOpen] = useState(false);
+  const contents = useContent();
 
   return (
     <div className='parent'>
@@ -31,18 +34,17 @@ function Dashboard() {
           />
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          <Card
-            size="md"
-            title='Coder'
-            description='Anil is the greatest coder recevied by humanity'
-            tags='#coderlife'
-          />
-          <Card
-            size="md"
-            title='DSA'
-            description='DSA is the key to FAANG'
-            tags='#coderlife'
-          />
+
+          {contents.map(({ type, link, title }) => {
+            return (
+              <Card
+                title={title}
+                link={link}
+                type={type}
+                size='md'
+              ></Card>
+            )
+          })}
         </div>
       </div>
 
